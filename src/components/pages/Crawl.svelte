@@ -1,29 +1,19 @@
 <script type="ts">
-import { loadImage } from 'canvas';
-  import { grid, gridTypes, terrain, terrainTypes,start, path,locations } from '../../lib/map';
+  import { grid, gridTypes, terrain, terrainTypes,start, path,locations,MapTile, current } from '../../lib/map';
   import ToggleContent from "../ui/ToggleContent.svelte";
   import Start from '../generators/crawl/Start.svelte';
-
-  function saveTile(e) {
-    console.log(e.detail);
-    const tile = e.detail.tile;
-
-    $locations[tile.id] = tile;
-    $path.push(tile.id);
-    $start = tile;
-
-    localStorage.start = JSON.stringify($start);
-    localStorage.path = JSON.stringify($path);
-    localStorage.locations = JSON.stringify($locations);
-  }
+  import HexMap from '../generators/crawl/HexMap.svelte';
+  import GridMap from '../generators/crawl/GridMap.svelte';
 
   function clear() {
     $start = null;
     $path = [];
     $locations = {};
+    $current = null;
     localStorage.removeItem('start');
     localStorage.removeItem('path');
     localStorage.removeItem('locations');
+    localStorage.removeItem('current');
   }
 
 </script>
@@ -47,11 +37,18 @@ import { loadImage } from 'canvas';
         </select>
       </label>
       {#if $start === null}
-        <Start on:create-tile={saveTile}/>
+        <Start/>
       {:else}
-      <button type="submit" class="border py-2 px-3 mb-2 hover:bg-purple-300 bg-purple-200 text-purple-800 border-purple-800" on:click={clear}>Clear All</button>
+        {#if $grid.name === 'Hex'}
+          <HexMap />
+        {:else}
+          <GridMap />
+        {/if}
+        <button type="submit" class="border py-2 px-3 mb-2 hover:bg-purple-300 bg-purple-200 text-purple-800 border-purple-800" on:click={clear}>Clear All</button>
       {/if}
 
     </ToggleContent>
   </div>
 </main>
+
+

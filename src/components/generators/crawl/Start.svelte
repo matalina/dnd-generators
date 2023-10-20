@@ -1,10 +1,8 @@
 <script type="ts">
-  import { createEventDispatcher } from "svelte";
-  import { terrain, grid, generateExits, MapTile, generateLandmark, generateRandomString } from "../../../lib/map";
+  import { terrain, grid, generateExits, MapTile, generateLandmark, generateRandomString, current, start, locations, path } from "../../../lib/map";
   import { rollOnTable } from "../../../lib/tables";
 
   let entrance = 1;
-  const dispatch = createEventDispatcher();
 
   function generate() {
     let tile:MapTile = {
@@ -15,7 +13,16 @@
       exits: {},
     };
     tile = generateExits(tile, entrance, null);
-    dispatch('create-tile', {tile});
+    
+    $current = tile;
+    $start = tile;
+    $locations[tile.id] = tile;
+    $path.push(tile.id);
+
+    localStorage.start = JSON.stringify($start);
+    localStorage.current = JSON.stringify($current);
+    localStorage.path = JSON.stringify($path);
+    localStorage.locations = JSON.stringify($locations);
   }
 </script>
 

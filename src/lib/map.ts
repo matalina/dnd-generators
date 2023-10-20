@@ -23,6 +23,7 @@ export const grid = writable<GridType>(gridTypes[0]);
 export const locations = writable<MapLocations>(localStorage?.locations ? JSON.parse(localStorage.locations) : {});
 export const start = writable<MapTile|null>(localStorage?.start ? JSON.parse(localStorage.start) : null);
 export const path = writable<string[]>(localStorage?.path ? JSON.parse(localStorage.path) : []); // MapTile.id[]
+export const current = writable<MapTile|null>(localStorage?.current ? JSON.parse(localStorage.current) : null);
 
 export interface Landmark {
   isLandmark: boolean;
