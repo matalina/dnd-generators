@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Markdown from '../ui/Markdown.svelte';
 </script>
 
@@ -143,6 +143,13 @@ markdown={`
     markdown={`
 #### 1.240522.01
 * added Solo tab with simple task and oracle
+  `}
+  />
+  <Markdown
+    small={true}
+    markdown={`
+#### 1.240621.01
+* added Story Mode
   `}
   />
 </div>
