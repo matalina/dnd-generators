@@ -152,4 +152,12 @@ markdown={`
 * added Story Mode
   `}
   />
+  <Markdown
+  small={true}
+  markdown={`
+#### 1.240621.02
+* removed timestamp from Content
+* added delete entry
+`}
+/>
 </div>

@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount, afterUpdate } from 'svelte';
-  import { format } from 'timeago.js';
   import TurndownService from 'turndown';
   TurndownService.prototype.escape = (text) => text;
   import { createEventDispatcher } from 'svelte';
@@ -49,14 +48,20 @@
   function startSession() {
     dispatch('start');
   }
+  function deleteEntry(key) {
+    console.log(key);
+    delete $content[key];
+    $content = {...$content};
+  }
 
 </script>
 
 <div bind:this={element} style="overflow:auto; height:400px;">
   {#each Object.keys($content) as key}
-    <div class={`entry ${classStyle($content[key].type)}`}>
-      {@html $content[key].output}
-      <br/><small>{format(parseInt(key))}</small>
+    <div class={`entry ${classStyle($content[key].type)} flex`}>
+      <div class="flex-grow">{@html $content[key].output}</div>
+      <div class="p-2"><button on:click={() => deleteEntry(key)}><i class="fa-light fa-square-xmark"></i></button></div>
+
     </div>
   {/each}
 </div>
