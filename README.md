@@ -7,6 +7,12 @@ A bunch of random tables meant to help inspire and move along solo ttrpg play mo
 - [x] implement story mode
 - [ ] add likely/unlikely to oracle
 - [ ] add hindered/eased steps to Tasks for Cypher
+- [ ] add adventure status, weather, terrain (wilderness, space, urban, dungeon) tile/hex
+- [ ] roll on random tables
+- [ ] add custom tables
+- [ ] generate random npc/creature
+- [ ] generate random cyphers
+- [ ] generate random loot/artifacts
 
 ### Bigger Additions
 - [ ] add ask ai
