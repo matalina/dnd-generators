@@ -17,7 +17,7 @@ A bunch of random tables meant to help inspire and move along solo ttrpg play mo
 - [ ] toggle d20 or Cypher System Difficultly Level
 - [ ] add advantage/disadvantage to tasks for d20 systems
 
-## Cypher Licesene
+## Cypher System Open License
 
 This product is an independent production and is not affiliated with Monte Cook Games, LLC. It is published under the Cypher System Open License, found at http://csol.montecookgames.com.
 
