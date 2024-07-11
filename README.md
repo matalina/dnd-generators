@@ -1,34 +1,24 @@
-STTV - Svelte / Typescript / Tailwind / Vite Template
-=====================================================
+# My TTRPG Generators
 
-Get up and running with Svelte, Typescript, Tailwind and Vite. Also includes testing setup using Jest.
+A bunch of random tables meant to help inspire and move along solo ttrpg play mostly based on the Cypher System.
 
-Installation
-------------
+## To Do List
+### Likely Additions
+- [x] implement story mode
+- [ ] add likely/unlikely to oracle
+- [ ] add hindered/eased steps to Tasks for Cypher
 
-```
-npx degit "srmullen/sttv#main" my_app
-cd my_app
-npm install
-```
+### Bigger Additions
+- [ ] add ask ai
+- [ ] import/export story mode details
+- [ ] save story mode details to use across devices
 
-Scripts
--------
+### Possible Expansion
+- [ ] toggle d20 or Cypher System Difficultly Level
+- [ ] add advantage/disadvantage to tasks for d20 systems
 
-### Start a development server
+## Cypher Licesene
 
-`npm run dev`
+This product is an independent production and is not affiliated with Monte Cook Games, LLC. It is published under the Cypher System Open License, found at http://csol.montecookgames.com.
 
-### Run tests
-
-`npm run test`
-or
-`npm run test:watch`
-
-### Build the application
-
-`npm run build`
-
-### Serve the application
-
-`npm run serve`
+CYPHER SYSTEM and its logo are trademarks of Monte Cook Games, LLC in the U.S.A. and other countries. All Monte Cook Games characters and character names, and the distinctive likenesses thereof, are trademarks of Monte Cook Games, LLC.
