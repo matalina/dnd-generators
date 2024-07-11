@@ -7,51 +7,47 @@
   import Solo from './components/pages/Solo.svelte';
   import Story from './components/pages/Story.svelte';
 
+  import table from './assets/table.svg';
+  import openBook from './assets/open-book.svg';
+  import d20 from './assets/d20.svg';
+
   export let url = '';
 </script>
 
 <div id="app" class="lg:w-1/3 mx-auto">
   <Router {url}>
     <nav class="flex items-center w-full p-3">
-      <div class="flex-grow flex">
+      <div class="flex-grow flex text-lg">
         <Link to="/">
           <div
             class="py-2 px-3 border border-gray-900 text-gray-900 mr-2 focus:bg-gray-200 hover:bg-gray-200"
           >
-            <i class="fa-solid fa-house" />
+          <img src={openBook} alt="Story Mode" class="h-4"/>
           </div>
         </Link>
-        <Link to="/explorers">
+        <Link to="/simple">
           <div
             class="py-2 px-3 border border-gray-900 text-gray-900 mr-2 focus:bg-gray-200 hover:bg-gray-200"
           >
-          <i class="fa-sharp fa-regular fa-hexagon-image"></i>
+          <img src={d20} alt="Simple Mode" class="h-4"/>
           </div>
         </Link>
-        <Link to="/solo">
+        <Link to="/all">
           <div
             class="py-2 px-3 border border-gray-900 text-gray-900 mr-2 focus:bg-gray-200 hover:bg-gray-200"
           >
-          <i class="fa-regular fa-dice-d20"></i>
-          </div>
-        </Link>
-        <Link to="/story">
-          <div
-            class="py-2 px-3 border border-gray-900 text-gray-900 mr-2 focus:bg-gray-200 hover:bg-gray-200"
-          >
-          <i class="fa-light fa-book-open-cover"></i>
+          <img src={table} alt="All Tools" class="h-4"/>
           </div>
         </Link>
       </div>
       <Link class="text-xs text-gray-500 p-2" to="/change-log">
-        v1.240621.02
+        v1.240711.01
       </Link>
     </nav>
     <section>
-      <Route path="/" component={Home} />
-      <Route path="/explorers" component={Explorers} />
-      <Route path="/solo" component={Solo} />
-      <Route path="/story" component={Story} />
+      <Route path="/" component={Story} />
+      <Route path="/simple" component={Solo} />
+      <Route path="/all" component={Home} />
       <Route path="/change-log" component={ChangeLog} />
     </section>
     <Disclaimer />

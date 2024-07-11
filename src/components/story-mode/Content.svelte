@@ -67,11 +67,10 @@
 </div>
 <div class="flex justify-end gap-2 mt-2">
   <button 
-    disabled={empty}
     class="py-2 px-3 border bg-orange-300 border-orange-900 text-orange-900 hover:bg-orange-400 focus:bg-orange-400"
     class:disable={empty} 
     on:click={startSession}
-  >Start Session</button>
+  >New Day</button>
   <button 
     disabled={!empty}
     class="py-2 px-3 border bg-orange-300 border-orange-900 text-orange-900 hover:bg-orange-400 focus:bg-orange-400" 

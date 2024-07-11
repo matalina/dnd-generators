@@ -160,4 +160,19 @@ markdown={`
 * added delete entry
 `}
 />
+<Markdown
+small={true}
+markdown={`
+#### 1.240711.01
+* fixed simple oracle question display
+* start session to new day & always clickable
+* added keyword generator with a question
+* allow markdown, and links in question/input box
+* updated icons to work offline
+* defaults to story mode
+* removed explores mode
+* renamed solo to simple
+* renamed the original home to all 
+`}
+/>
 </div>

@@ -8,10 +8,19 @@
   import { daysWeek, moonPhases, rollOnTable, timeDay, season, weather } from "../../lib/tables";
   import InputButton from "../story-mode/InputButton.svelte";
   import DiceButton from "../story-mode/DiceButton.svelte";
+  import KeywordsButton from "../story-mode/KeywordsButton.svelte";
+  import MarkdownIt from 'markdown-it';
+
+  const md = new MarkdownIt({
+    html: false,
+    xhtmlOut: true,
+    breaks: true,
+    linkify: true,
+  });
 
   $: list = Object.keys($content);
   $: question = '';
-  const types = ['input', 'oracle', 'task', 'roll', 'start'] as const
+  const types = ['input', 'oracle', 'task', 'roll', 'start', 'keyword'] as const
   type Type = typeof types[number]
   interface StoryEntry {
     [datetime: number]: {
@@ -34,10 +43,9 @@
   }
 
   function updateStore(text:string, type:string) {
-    console.log(type, text);
     if(type !== 'start') {
       $content[Date.now() - 1000] = {
-        output: question,
+        output: md.render(question),
         type: 'input' as Type,
       };
     }
@@ -93,7 +101,6 @@
     const output = `<em class="text-xs italic">${statuses[status-1].guidance}</em><br/>` +
     `<strong>Adventure Status:</strong> ${statuses[status-1].status} ${status} (${statuses[status-1].target})` +
     `<br/><strong>Weather:</strong> ${weathers.description}`;
-    console.log(output);
 
     updateStore(output, 'start');
   }
@@ -116,6 +123,7 @@
       </div>
       <div class="flex gap-2 justify-center">
         <DiceButton on:click={addContent}/>
+        <KeywordsButton on:click={addContent}/>
       </div>
     </div>
 

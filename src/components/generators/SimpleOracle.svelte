@@ -55,7 +55,6 @@ function getAnswer() {
 
 function reset() {
   answer = '';
-  question = '';
   oldQuestion = '';
   roll = 0;
   ask = 0;
