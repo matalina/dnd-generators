@@ -175,4 +175,11 @@ markdown={`
 * renamed the original home to all 
 `}
 />
+<Markdown
+small={true}
+markdown={`
+#### 1.240826.01
+* added mainor tarot deck to Decks
+`}
+/>
 </div>

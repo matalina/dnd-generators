@@ -1,5 +1,5 @@
 <script>
-  import { majorArcana, playingCards, shuffle, tarotDeck } from './../../lib/decks';
+  import { majorArcana, minorArcana, playingCards, shuffle, tarotDeck } from './../../lib/decks';
   import ToggleContent from "../ui/ToggleContent.svelte";
   import Answer from '../ui/Answer.svelte';
 
@@ -7,6 +7,7 @@
   let decks = [
     {name: 'Playing Cards', cards: playingCards},
     {name: 'Major Arcana', cards: majorArcana},
+    {name: 'Minor Arcana', cards: minorArcana},
     {name: 'Full Tarot', cards: tarotDeck}
   ];
 

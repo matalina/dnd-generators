@@ -71,10 +71,11 @@ export const arcana: Deck = [
 ];
 
 suits =  ['Cups','Pentacles','Swords','Wands'];
-face = ['Page','Queen','King','Ace'];
-faceValue = [11,12,13,1];
+face = ['Page','Knight','Queen','King','Ace'];
+faceValue = [11,12,13,,14,1];
 
 export const majorArcana = shuffle(arcana);
+export const minorArcana = shuffle(makeDeck([], suits, face, faceValue));
 export const tarotDeck = shuffle(makeDeck(arcana, suits, face, faceValue));
 
 export function shuffle(deck: Deck) {
