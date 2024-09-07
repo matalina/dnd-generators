@@ -8,9 +8,10 @@ export function rollOnTable(table: RandomTable) {
 
   for (let i in table.table) {
     const row = table.table[i];
-    if (row.min === null && total <= row.max) description = row.description.toString();
-    else if (row.max === null && total >= row.min) description = row.description.toString();
-    else if (total >= row.min && total <= row.max) description = row.description.toString();
+    const desc = typeof row.description === 'string' ? row.description.toString(): row.description().toString();
+    if (row.min === null && total <= row.max) description = desc;
+    else if (row.max === null && total >= row.min) description = desc;
+    else if (total >= row.min && total <= row.max) description = desc;
   }
   return { description, roll };
 }
@@ -25,7 +26,7 @@ export interface RandomTable {
 export interface MinMaxRow {
   min: number | null;
   max: number | null;
-  description: string;
+  description: string | Function;
 }
 
 export const nearbyLocationEven: RandomTable = {

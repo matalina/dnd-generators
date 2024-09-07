@@ -182,4 +182,14 @@ markdown={`
 * added mainor tarot deck to Decks
 `}
 />
+<Markdown
+small={true}
+markdown={`
+#### 1.240907.01
+* changed simple to Cypher system solo tools
+* added D&D (d20) style solo tools
+  * added D&D DC level checks
+  * added hex terrain, point of intest and landmark random tables
+`}
+/>
 </div>
