@@ -192,4 +192,14 @@ markdown={`
   * added hex terrain, point of intest and landmark random tables
 `}
 />
+<Markdown
+small={true}
+markdown={`
+#### 1.240908.01
+* added key words to dnd solo
+* changed point of interest table
+* added point of interest tables
+* removed disclaimer from non-cypher system pages
+`}
+/>
 </div>

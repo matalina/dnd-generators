@@ -84,13 +84,249 @@ export const poi: RandomTable = {
   table: [
     { min: 1, max: 2, description: 'Settlement' },
     { min: 3, max: 10, description: 'Monstrous' },
-    { min: 11, max: 12, description: 'NPC' },
-    { min: 13, max: 13, description: 'Divine' },
-    { min: 14, max: 15, description: 'Military' },
-    { min: 16, max: 16, description: 'Faction' },
+    { min: 11, max: 14, description: 'NPC' },
+    { min: 15, max: 16, description: 'Dungeon' },
     { min: 17, max: 17, description: 'Magic' },
     { min: 18, max: 18, description: 'Geography' },
     { min: 19, max: 20, description: 'Quest' },
+  ]
+};
+
+export const faction: RandomTable = {
+  name: 'Faction',
+  description: 'Random Faction',
+  diceFormula: '1d20',
+  table: [
+    { min: 1, max: 5, description: 'Create a New Faction' },
+    { min: 6, max: 16, description: 'Use a Known Faction' },
+    { min: 17, max: 20, description: 'New Faction related to Known' },
+  ]
+};
+
+export const settlement: RandomTable = {
+  name: 'Settlement',
+  description: 'Random Settlement',
+  diceFormula: '1d20',
+  table: [
+    { min: 1, max: 1, description: 'Lone Structure' },
+    { min: 2, max: 6, description: 'Hamlet' },
+    { min: 7, max: 11, description: 'Village' },
+    { min: 12, max: 16, description: 'Town' },
+    { min: 17, max: 18, description: 'Stronghold' },
+    { min: 19, max: 20, description: 'City' },
+  ]
+};
+
+export const monstrous: RandomTable = {
+  name: 'Monstrous',
+  description: 'Random Monstrous PoI',
+  diceFormula: '1d20',
+  table: [
+    { min: 1, max: 7, description: 'Lair' },
+    { min: 8, max: 9, description: 'Ruled Land' },
+    { min: 10, max: 12, description: 'Feeding Grounds' },
+    { min: 13, max: 13, description: 'Migratory Endpoint' },
+    { min: 14, max: 14, description: 'Graveyard' },
+    { min: 15, max: 17, description: 'Claimed Turf' },
+    { min: 18, max: 19, description: 'Mating Grounds' },
+    { min: 20, max: 20, description: 'Clash (reroll twice)' },
+  ]
+};
+
+export const npc: RandomTable = {
+  name: 'NPC',
+  description: 'Random NPC PoI',
+  diceFormula: '1d20',
+  table: [
+    { min: 1, max: 1, description: 'Wandering Merchant' },
+    { min: 2, max: 2, description: 'Hermit' },
+    { min: 3, max: 3, description: 'Religious Enclave' },
+    { min: 4, max: 4, description: 'Slave Camp' },
+    { min: 5, max: 5, description: 'Bandit Hideout' },
+    { min: 6, max: 6, description: 'Black Market' },
+    { min: 7, max: 7, description: 'Hunting Territory' },
+    { min: 8, max: 8, description: 'Temple' },
+    { min: 9, max: 9, description: 'Shrine' },
+    { min: 10, max: 10, description: 'Tomb' },
+    { min: 11, max: 11, description: 'Reliquery' },
+    { min: 12, max: 12, description: 'Sacred Site' },
+    { min: 13, max: 13, description: 'Military Base' },
+    { min: 14, max: 14, description: 'Patrol Post' },
+    { min: 15, max: 15, description: 'Waystation' },
+    { min: 16, max: 16, description: 'Mage Tower' },
+    { min: 17, max: 17, description: 'Cultist Hideout' },
+    { min: 18, max: 18, description: 'Mercenary Outpost' },
+    { min: 19, max: 19, description: 'Cemetery' },
+    { min: 20, max: 20, description: 'Ruins' },
+  ]
+};
+
+export const useNPC: RandomTable = {
+  name: 'Use NPC',
+  description: 'Random NPC Used',
+  diceFormula: '1d20',
+  table: [
+    { min: 1, max: 12, description: 'Create a New NPC' },
+    { min: 13, max: 16, description: 'Use a Known NPC' },
+    { min: 17, max: 18, description: 'Use an Existing NPC' },
+    { min: 19, max: 20, description: 'New NPC, but related to Known' },
+  ]
+};
+
+export const dungeon: RandomTable = {
+  name: 'Dungeon',
+  description: 'Random Dungeon Type',
+  diceFormula: '1d20',
+  table: [
+    { min: 1, max: 1, description: 'Palace' },
+    { min: 2, max: 2, description: 'Crypt' },
+    { min: 3, max: 3, description: 'Tomb' },
+    { min: 4, max: 4, description: 'Sanctuary' },
+    { min: 5, max: 5, description: 'Temple' },
+    { min: 6, max: 6, description: 'Prison' },
+    { min: 7, max: 7, description: 'Tower' },
+    { min: 8, max: 8, description: 'Cave' },
+    { min: 9, max: 9, description: 'Ruin' },
+    { min: 10, max: 10, description: 'Fortress' },
+    { min: 11, max: 11, description: 'Labryinth' },
+    { min: 12, max: 12, description: 'Mine' },
+    { min: 13, max: 13, description: 'Catacombs' },
+    { min: 14, max: 14, description: 'Underground City' },
+    { min: 15, max: 15, description: 'Abandoned Monastary' },
+    { min: 16, max: 16, description: 'Infernal Gate' },
+    { min: 17, max: 17, description: 'Shadow Realm Rift' },
+    { min: 18, max: 18, description: 'Feywild Grove' },
+    { min: 19, max: 19, description: 'Chaos Rift' },
+    { min: 20, max: 20, description: 'Phantom Tower' },
+  ]
+};
+
+export const door: RandomTable = {
+  name: 'Door',
+  description: 'Random Door',
+  diceFormula: '1d6',
+  table: [
+    { min: 1, max: 1, description: 'Trapped' },
+    { min: 2, max: 3, description: 'Locked' },
+    { min: 4, max: 6, description: 'Unlocked' },
+  ]
+};
+
+export const fromStaircase: RandomTable = {
+  name: 'From a Staircase',
+  description: 'Open from a Staircase',
+  diceFormula: '1d6',
+  table: [
+    { min: 1, max: 1, description: 'Corridor with another door' },
+    { min: 2, max: 4, description: 'Corridor with two other door' },
+    { min: 5, max: 6, description: 'Corridor with three other doors' },
+  ]
+};
+
+export const fromCorridor: RandomTable = {
+  name: 'From a Staircase',
+  description: 'Open from a Staircase',
+  diceFormula: '1d6',
+  table: [
+    { min: 1, max: 1, description: 'Small room with another door' },
+    { min: 2, max: 2, description: 'Medium size room with another door' },
+    { min: 3, max: 3, description: 'Wide room with another door' },
+    { min: 4, max: 4, description: 'Wide room with two other doors' },
+    { min: 5, max: 5, description: 'Large room with two other doors' },
+    { min: 6, max: 6, description: 'Staircase with a door in the end' },
+  ]
+};
+
+export const fromRoom: RandomTable = {
+  name: 'From a Room',
+  description: 'Open from a Room',
+  diceFormula: '1d6',
+  table: [
+    { min: 1, max: 1, description: 'Small room with another door' },
+    { min: 2, max: 3, description: 'Medium sized room' },
+    { min: 4, max: 4, description: 'Wide room' },
+    { min: 5, max: 5, description: 'Large Room with pillars' },
+    { min: 6, max: 6, description: 'Staircase with a door in the end.' },
+  ]
+};
+
+export const secret: RandomTable = {
+  name: 'Secret',
+  description: 'Random Secret',
+  diceFormula: '1d6',
+  table: [
+    { min: 1, max: 1, description: 'Trap' },
+    { min: 2, max: 3, description: 'Nothing here' },
+    { min: 4, max: 5, description: 'You have found a hidden Chest' },
+    { min: 6, max: 6, description: 'A Secret door to a staircase' },
+  ]
+};
+
+export const magic: RandomTable = {
+  name: 'Magic',
+  description: 'Random Magic',
+  diceFormula: '1d20',
+  table: [
+    { min: 1, max: 1, description: 'Storm' },
+    { min: 2, max: 2, description: 'Tower' },
+    { min: 3, max: 3, description: 'Portal' },
+    { min: 4, max: 4, description: 'Obelisk' },
+    { min: 5, max: 5, description: 'Well' },
+    { min: 6, max: 6, description: 'Enchanted Grove' },
+    { min: 7, max: 7, description: 'Crystal Cavern' },
+    { min: 8, max: 8, description: 'Runestone Circle' },
+    { min: 9, max: 9, description: 'Spring' },
+    { min: 10, max: 10, description: 'Ruins' },
+    { min: 11, max: 11, description: 'Fountain' },
+    { min: 12, max: 12, description: 'Witch\'s Hut' },
+    { min: 13, max: 13, description: 'Altar' },
+    { min: 14, max: 14, description: 'Teleporation gate' },
+    { min: 15, max: 15, description: 'Ley line Convergence' },
+    { min: 16, max: 16, description: 'Workshop' },
+    { min: 17, max: 17, description: 'Library' },
+    { min: 18, max: 18, description: 'Dimensional Rift' },
+    { min: 19, max: 19, description: 'Mirror' },
+    { min: 20, max: 20, description: 'Pool' },
+  ]
+};
+
+export const geographic: RandomTable = {
+  name: 'Geographic',
+  description: 'Random Geographic',
+  diceFormula: '1d20',
+  table: [
+    { min: 1, max: 1, description: 'Rock formation' },
+    { min: 2, max: 2, description: 'Chasm' },
+    { min: 3, max: 3, description: 'Floating Mountain' },
+    { min: 4, max: 4, description: 'Canyon' },
+    { min: 5, max: 5, description: 'Cave' },
+    { min: 6, max: 6, description: 'Cliff' },
+    { min: 7, max: 7, description: 'Glade' },
+    { min: 8, max: 8, description: 'Field' },
+    { min: 9, max: 9, description: 'Crater' },
+    { min: 10, max: 10, description: 'Giant Mushrooms' },
+    { min: 11, max: 11, description: 'Field of flowers' },
+    { min: 12, max: 12, description: 'Ancient Grove' },
+    { min: 13, max: 13, description: 'Glowing Moss' },
+    { min: 14, max: 14, description: 'Sunken Marsh' },
+    { min: 15, max: 15, description: 'Petrified Forest' },
+    { min: 16, max: 16, description: 'A feywild grove' },
+    { min: 17, max: 17, description: 'Glacier' },
+    { min: 18, max: 18, description: 'Molten field' },
+    { min: 19, max: 19, description: 'Gyzer' },
+    { min: 20, max: 20, description: 'Hot Spring' },
+  ]
+};
+
+export const quest: RandomTable = {
+  name: 'Quest',
+  description: 'Random Quest PoI',
+  diceFormula: '1d20',
+  table: [
+    { min: 1, max: 6, description: 'Start a Quest' },
+    { min: 7, max: 12, description: 'End a Quest' },
+    { min: 13, max: 18, description: 'Continue a Quest' },
+    { min: 19, max: 20, description: 'Random Encounter & reroll' },
   ]
 };
 

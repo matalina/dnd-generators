@@ -1,5 +1,5 @@
 <script type="ts">
-  import { contents, landmark, poi, special, status, terrain, weather } from '../../lib/hex';
+  import { contents, door, dungeon, fromCorridor, fromRoom, fromStaircase, geographic, landmark, monstrous, npc, poi, quest, secret, settlement, special, status, terrain, useNPC, weather, faction } from '../../lib/hex';
   import {
     rollOnTable,
     RandomTable,
@@ -13,8 +13,21 @@
     [special.name]: special,
     [status.name]: status,
     [poi.name]: poi,
+    [faction.name]: faction,
     [landmark.name]: landmark,
     [contents.name]: contents,
+    [settlement.name]: settlement,
+    [monstrous.name]: monstrous,
+    [npc.name]: npc,
+    [useNPC.name]: useNPC,
+    [dungeon.name]: dungeon,
+    [door.name]: door,
+    [fromStaircase.name]: fromStaircase,
+    [fromCorridor.name]: fromCorridor,
+    [fromRoom.name]: fromRoom,
+    [secret.name]: secret,
+    [geographic.name]: geographic,
+    [quest.name]: quest,
   };
 
   let selectedTable = '';

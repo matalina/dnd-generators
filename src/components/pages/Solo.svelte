@@ -5,6 +5,7 @@
   import SimpleOracle from '../generators/SimpleOracle.svelte';
   import SimpleTasks from '../generators/cypher/SimpleTasks.svelte';
   import SoloRandom from '../generators/SoloRandom.svelte';
+  import Disclaimer from '../ui/Disclaimer.svelte';
 </script>
 
 <main class="md:flex">
@@ -17,3 +18,4 @@
     <SoloRandom />
   </div>
 </main>
+<Disclaimer />

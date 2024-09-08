@@ -20,7 +20,7 @@
   <Router {url}>
     <nav class="flex items-center w-full p-3">
       <div class="flex-grow flex text-lg">
-        <Link to="/">
+        <Link to="/solo">
           <div
             class="py-2 px-3 border border-gray-900 text-gray-900 mr-2 focus:bg-gray-200 hover:bg-gray-200"
           >
@@ -50,17 +50,17 @@
         </Link>
       </div>
       <Link class="text-xs text-gray-500 p-2" to="/change-log">
-        v1.240907.01
+        v1.240908.01
       </Link>
     </nav>
     <section>
-      <Route path="/" component={Story} />
+      <Route path="/" component={Dnd} />
+      <Route path="/solo" component={Story} />
       <Route path="/solo/cypher-system" component={Solo} />
       <Route path="/solo/dnd" component={Dnd} />
       <Route path="/all" component={Home} />
       <Route path="/change-log" component={ChangeLog} />
     </section>
-    <Disclaimer />
   </Router>
 </div>
 

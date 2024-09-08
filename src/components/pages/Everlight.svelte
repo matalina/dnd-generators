@@ -10,6 +10,7 @@
   import Decks from '../generators/Decks.svelte';
   import MapTile from '../generators/MapTile.svelte';
   import EverlightRandomTables from '../generators/home/EverlightRandomTables.svelte';
+  import Disclaimer from '../ui/Disclaimer.svelte';
 </script>
 
 <main class="md:flex">
@@ -27,3 +28,4 @@
     <Decks />
   </div>
 </main>
+<Disclaimer />

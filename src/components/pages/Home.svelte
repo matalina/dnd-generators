@@ -10,6 +10,7 @@
   import Developer from '../generators/cypher/Developer.svelte';
   import Decks from '../generators/Decks.svelte';
   import MapTile from '../generators/MapTile.svelte';
+  import Disclaimer from '../ui/Disclaimer.svelte';
 </script>
 
 <main class="md:flex">
@@ -27,3 +28,4 @@
     <Keywords />
   </div>
 </main>
+<Disclaimer />

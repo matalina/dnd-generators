@@ -8,6 +8,7 @@
   import Cypher from '../generators/cypher/Cypher.svelte';
   import Developer from '../generators/cypher/Developer.svelte';
   import ExplorersRandomTables from '../generators/home/ExplorersRandomTables.svelte';
+  import Disclaimer from '../ui/Disclaimer.svelte';
 </script>
 
 <main class="md:flex">
@@ -24,3 +25,4 @@
     <Keywords />
   </div>
 </main>
+<Disclaimer />

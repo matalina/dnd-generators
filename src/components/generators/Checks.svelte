@@ -56,7 +56,7 @@
 </script>
 
 <ToggleContent hide={false}>
-  <span slot="title">Tasks</span>
+  <span slot="title">Checks</span>
   <form class="flex flex-col" on:submit|preventDefault={generate}>
     <label for="question">
       Task:
