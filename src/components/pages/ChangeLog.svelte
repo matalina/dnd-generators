@@ -202,4 +202,11 @@ markdown={`
 * removed disclaimer from non-cypher system pages
 `}
 />
+<Markdown
+small={true}
+markdown={`
+#### 1.240908.02
+* removed gmi from dnd solo oracle
+`}
+/>
 </div>
