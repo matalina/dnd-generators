@@ -67,7 +67,7 @@ function reset() {
     {#if answer}
     <Answer answer={`<em><strong>Q:</strong> ${oldQuestion}</em><br/>
       <small class="text-xs text-blue-500">(${roll.output})</small><br/>
-      <strong>${answer}</strong><br/>
+      <strong>${answer}</strong> 
       ${isAndOrBut ? `${keywords.join(', ')}<br/>`: ''}
       `} />
     {/if}

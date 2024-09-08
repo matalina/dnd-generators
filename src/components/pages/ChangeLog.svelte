@@ -209,4 +209,11 @@ markdown={`
 * removed gmi from dnd solo oracle
 `}
 />
+<Markdown
+small={true}
+markdown={`
+#### 1.240908.03
+* removed line break from keywords
+`}
+/>
 </div>
