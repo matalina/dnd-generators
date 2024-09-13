@@ -21,15 +21,17 @@ export const terrain: RandomTable = {
   description: 'Random Terrain',
   diceFormula: '1d20',
   table: [
-    { min: 1, max: 2, description: 'Plains' },
-    { min: 3, max: 3, description: 'Desert' },
-    { min: 4, max: 5, description: 'Forest' },
-    { min: 6, max: 7, description: 'Hills' },
-    { min: 8, max: 8, description: 'Jungle' },
-    { min: 9, max: 9, description: 'Mountain' },
-    { min: 10, max: 10, description: 'Swamp' },
-    { min: 11, max: 11, description: 'Special' },
-    { min: 12, max: 20, description: 'Same as Previous Hex' },
+    { min: 1, max: 2, description: 'Plains (Cost: 4)' },
+    { min: 3, max: 3, description: 'Desert (Cost: 6)' },
+    { min: 4, max: 5, description: 'Forest (Cost: 6)' },
+    { min: 6, max: 7, description: 'Hills (Cost: 6)' },
+    { min: 8, max: 8, description: 'Jungle (Cost: 12)' },
+    { min: 9, max: 9, description: 'Mountain  (Cost: 12)' },
+    { min: 10, max: 10, description: 'Swamp (Cost: 12)' },
+    { min: 11, max: 11, description: 'Special (Cost: +4)' },
+    { min: 12, max: 12, description: 'Coastal  (Cost: 4)' },
+    { min: 13, max: 13, description: 'Aquatic (Cost: 8)' },
+    { min: 14, max: 20, description: 'Same as Previous Hex' },
   ]
 };
 

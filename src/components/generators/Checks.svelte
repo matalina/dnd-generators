@@ -19,22 +19,22 @@
     let string = '';
     if (value >= parseInt(target.toString()) + 5) {
       string += '<strong>Success</strong>';
-      string += '<br/>and ' + getRandomKeywords().join(', ');
+      string += ' and ' + getRandomKeywords().join(', ');
     }else if (value >= parseInt(target.toString()) && value < parseInt(target.toString() + 5)) {
       string += '<strong>Success</strong>';
     } else if (value < parseInt(target.toString()) - 1 && value >= 2){
       string += `<strong>Fail</strong>`;
-      string += '<br/>but '+ getRandomKeywords().join(', ');
+      string += ' but '+ getRandomKeywords().join(', ');
     } else {
       string += `<strong>Fail</strong>`;
-      string += '<br/>and ' + getRandomKeywords().join(', ');
+      string += ' and ' + getRandomKeywords().join(', ');
     }
 
     if (value === 1) {
-      string += `<br/><strong>Fumble</strong>`;
+      string += `<br/><strong>Critical Fail</strong>`;
     }
     if (value === 20) {
-      string += '<br/><strong>Crircal Success</strong>';
+      string += '<br/><strong>Critical Success</strong>';
     }
     return `${string}`;
   }
